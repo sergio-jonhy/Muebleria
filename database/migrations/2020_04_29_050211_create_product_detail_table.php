@@ -14,6 +14,8 @@ class CreateProductDetailTable extends Migration
     public function up()
     {
         Schema::create('product_detail', function (Blueprint $table) {
+            $table->unsignedBigInteger('products_id');
+            $table->foreign('products_id')->references('id')->on('products');
             $table->integer('number_of_pieces');
             $table->text('measurements');
             $table->decimal('weight', 3, 2);
