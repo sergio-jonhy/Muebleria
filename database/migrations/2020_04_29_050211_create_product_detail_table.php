@@ -21,7 +21,7 @@ class CreateProductDetailTable extends Migration
             $table->decimal('weight', 3, 2);
             $table->string('material', 100);
             $table->string('colors', 100);
-            $table->string('finishes', 100);
+            $table->string('desing', 100);
             $table->text('description');
             $table->timestamps();
         });
